@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/groups', [\App\Http\Controllers\MyController::class, 'index'])
+    ->name('groups.index');
+Route::get('/groups/create', [\App\Http\Controllers\MyController::class, 'create'])
+    ->name('groups.create');
+Route::post('/groups', [\App\Http\Controllers\MyController::class, 'store'])
+    ->name('create');
+Route::get('/groups/{group}', [\App\Http\Controllers\MyController::class, 'show'])
+    ->name('groups.show');
+Route::get('/groups/{group}/students/create', [\App\Http\Controllers\MyController::class, 'create'])
+    ->name('groups.create');
+Route::post('/groups/{group}/students', [\App\Http\Controllers\MyController::class, 'store'])
+    ->name('create');
+Route::get('/groups/{group}/students/{student}', [\App\Http\Controllers\MyController::class, 'show'])
+    ->name('create');
