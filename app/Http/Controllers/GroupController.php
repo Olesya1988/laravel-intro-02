@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Group;
 use Illuminate\Http\Request;
 
-class MyController extends Controller
+class GroupController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -43,9 +43,9 @@ class MyController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Group $group)
+    public function show($id = null)
     {
-        return view('groups.show',compact('group'));
+        return view('groups.show', ['group' => Group::find($id)]);
     }
 
     /**

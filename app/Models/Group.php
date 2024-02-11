@@ -7,8 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Group extends Model
 {
-    protected $table = 'groups';
-    protected $primary_key='id';
     use HasFactory;
 
     public function students()

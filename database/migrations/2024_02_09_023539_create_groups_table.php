@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->string('title')->default('');
-            $table->string('start_from')->default('');
+            $table->string('title');
+            $table->string('start_from');
             $table->boolean('is_active')->default(true);
-            $table->string('created_at')->default('');
-            $table->string('updated_at')->default('');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
             $table->timestamps();
         });
     }

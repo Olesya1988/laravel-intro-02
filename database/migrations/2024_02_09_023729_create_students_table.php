@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
-            $table->integer('group_id')->default(0);
-            $table->string('surname')->default('');
-            $table->string('name')->default('');
-            $table->string('created_at')->default('');
-            $table->string('updated_at')->default('');
+            $table->unsignedBigInteger('group_id');
+            $table->string('surname');
+            $table->string('name');
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
             $table->timestamps();
         });
     }
