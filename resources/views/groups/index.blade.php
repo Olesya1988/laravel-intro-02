@@ -13,6 +13,7 @@
                     <li class="list-item">{{ $group->title }}</li>
                 @endforeach               
             </ul>
+            <button><a href="/groups/create">Создать новую группу</a>
         </div>
     </body>
 </html>

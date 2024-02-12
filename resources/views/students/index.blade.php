@@ -13,6 +13,7 @@
                     <li class="list-item">{{ $student->surname }} {{ $student->name }}</li>
                 @endforeach               
             </ul>
+            <button><a href="/students/create">Создать нового студента</a>
         </div>
     </body>
 </html>

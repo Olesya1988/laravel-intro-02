@@ -15,6 +15,7 @@
                 <input type="text" name="surname" id="surname" placeholder="Введите фамилию"></input>
                 <button type="submit">Добавить</button>
             </form>
+            <button><a href="/students/index">Назад к списку студентов</a>
         </div>
     </body>
 </html>

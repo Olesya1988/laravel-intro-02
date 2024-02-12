@@ -8,9 +8,11 @@
     <body>
         <div class="container">
             <h1>Группа: {{ $group->title }}</h1>
-                <p>Начало обучения: {{ $group->start_from }}</з>
-                <p>Дата создания: {{ $group->created_at }}</p>
-                <p>Дата изменения: {{ $group->updated_at }}</p>                        
+            <p>Начало обучения: {{ $group->start_from }}</p>
+            <p>Дата создания: {{ $group->created_at }}</p>
+            <p>Дата изменения: {{ $group->updated_at }}</p>                        
         </div>
+        <button><a href="/groups/index">Назад к списку групп</a>
+        <button><a href="/groups/create">Создать новую группу</a>
     </body>
 </html>

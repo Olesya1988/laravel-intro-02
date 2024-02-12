@@ -15,5 +15,7 @@
                 <button type="submit">Добавить</button>
             </form>
         </div>
+        <button><a href="/groups/index">Назад к списку групп</a>
+</button>
     </body>
 </html>

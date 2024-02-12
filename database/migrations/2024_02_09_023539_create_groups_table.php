@@ -16,8 +16,6 @@ return new class extends Migration
             $table->string('title');
             $table->string('start_from');
             $table->boolean('is_active')->default(true);
-            $table->timestamp('created_at')->nullable();
-            $table->timestamp('updated_at')->nullable();
             $table->timestamps();
         });
     }
