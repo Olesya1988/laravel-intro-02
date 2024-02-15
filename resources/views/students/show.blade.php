@@ -12,7 +12,6 @@
             <p>Дата создания: {{ $student->created_at }}</p>
             <p>Дата изменения: {{ $student->updated_at }}</p>                        
         </div>
-        <button><a href="/students/index">Назад к списку студентов</a>
-        <button><a href="/students/create">Создать нового студента</a>
+        <button><a href="/groups/{{$group}}/students">Назад к списку студентов</a>
     </body>
 </html>

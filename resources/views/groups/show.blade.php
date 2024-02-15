@@ -12,7 +12,6 @@
             <p>Дата создания: {{ $group->created_at }}</p>
             <p>Дата изменения: {{ $group->updated_at }}</p>                        
         </div>
-        <button><a href="/groups/index">Назад к списку групп</a>
-        <button><a href="/groups/create">Создать новую группу</a>
+        <button><a href="/groups">Назад к списку групп</a>
     </body>
 </html>

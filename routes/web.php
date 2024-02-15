@@ -18,17 +18,10 @@ Route::get('/', function () {
 });
 
 
-Route::get('/groups', [\App\Http\Controllers\GroupController::class, 'index'])
-    ->name('groups.index');
-Route::get('/groups/create', [\App\Http\Controllers\GroupController::class, 'create'])
-    ->name('groups.create');
-Route::post('/groups', [\App\Http\Controllers\GroupController::class, 'store'])
-    ->name('groups.index');
-Route::get('/groups/{group}', [\App\Http\Controllers\GroupController::class, 'show'])
-    ->name('groups.show');
-Route::get('/groups/{group}/students/create', [\App\Http\Controllers\StudentController::class, 'create'])
-    ->name('students.create');
-Route::post('/groups/{group}/students', [\App\Http\Controllers\StudentController::class, 'store'])
-    ->name('students.index');
-Route::get('/groups/{group}/students/{student}', [\App\Http\Controllers\StudentController::class, 'show'])
-    ->name('students.show');
+Route::get('/groups', [\App\Http\Controllers\GroupController::class, 'index']);
+Route::get('/groups/create', [\App\Http\Controllers\GroupController::class, 'create']);
+Route::post('/groups', [\App\Http\Controllers\GroupController::class, 'store']);
+Route::get('/groups/{group}', [\App\Http\Controllers\GroupController::class, 'show']);
+Route::get('/groups/{group}/students/create', [\App\Http\Controllers\StudentController::class, 'create']);
+Route::post('/groups/{group}/students', [\App\Http\Controllers\StudentController::class, 'store']);
+Route::get('/groups/{group}/students/{student}', [\App\Http\Controllers\StudentController::class, 'show']);

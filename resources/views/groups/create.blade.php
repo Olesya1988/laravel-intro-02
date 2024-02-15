@@ -8,14 +8,14 @@
     <body>
         <div class="container">
             <h1>Создание новой группы</h1>        
-            <form method="post" action="/groups/create">
+            <form method="post" action="/groups">
             @csrf
                 <input type="text" name="title" id="title" placeholder="Введите название группы">
                 <input type="text" name="start_from" id="start_from" placeholder="Введите год обучения"></input>
                 <button type="submit">Добавить</button>
             </form>
+            <button><a href="/groups">Назад к списку групп</a>
         </div>
-        <button><a href="/groups/index">Назад к списку групп</a>
 </button>
     </body>
 </html>

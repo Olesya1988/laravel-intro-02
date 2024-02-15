@@ -8,14 +8,13 @@
     <body>
         <div class="container">
             <h1>Создание нового студента</h1>        
-            <form method="post" action="/students/create">
+            <form method="post" action="/groups/{{$group}}/students">
             @csrf
                 <input type="text" name="id" id="id" placeholder="Введите id группы">
                 <input type="text" name="name" id="name" placeholder="Введите имя">
                 <input type="text" name="surname" id="surname" placeholder="Введите фамилию"></input>
                 <button type="submit">Добавить</button>
             </form>
-            <button><a href="/students/index">Назад к списку студентов</a>
         </div>
     </body>
 </html>
