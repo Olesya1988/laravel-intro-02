@@ -12,6 +12,13 @@
             <p>Дата создания: {{ $group->created_at }}</p>
             <p>Дата изменения: {{ $group->updated_at }}</p>                        
         </div>
-        <button><a href="/groups">Назад к списку групп</a>
+        <button><a href="/groups">Назад к списку групп</a></button>
+        <h1>Список студентов</h1>        
+            <ul class="list">
+                @foreach($students as $student)
+                    <li class="list-item"><a href="/groups/{{$group->id}}/students/{{$student->group_id}}">{{ $student->surname }} {{ $student->name }}</a></li>
+                @endforeach               
+            </ul>
+            <button><a href="/groups/{{$group->id}}/students/create">Создать нового студента</a></button>
     </body>
 </html>

@@ -10,7 +10,13 @@ class Student extends Model
     use HasFactory;
 
     protected $fillable = [
+        'group_id',
         'name',
         'surname',
     ];
+
+    public function group()
+    {
+        return $this->belongsTo(Group::class);
+    }
 }

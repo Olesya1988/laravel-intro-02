@@ -10,7 +10,7 @@
             <h1>Список групп</h1>        
             <ul class="list">
                 @foreach($groups as $group)
-                    <li class="list-item">{{ $group->title }}</li>
+                    <li class="list-item"><a href="/groups/{{$group->id}}">{{ $group->title }}</a></li>
                 @endforeach               
             </ul>
             <button><a href="/groups/create">Создать новую группу</a>

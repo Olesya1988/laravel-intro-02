@@ -10,9 +10,9 @@ class StudentController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($group)
     {
-        $students = Student::all();
+        $students = Student::find($group);
 
         return view('students.index', compact('students'));
     }
@@ -20,15 +20,15 @@ class StudentController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create($group)
     {
-        return view('students.create');
+        return view('students.create', ['group' => $group]);
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request, $group)
     {
         $request->validate([
             'name' => 'required',
@@ -37,15 +37,15 @@ class StudentController extends Controller
 
         Student::create($request->all());
 
-        return redirect()->route('students.index')->with('success','Student created successfully.');
+        return redirect('/groups/' . $group);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show($id = null)
+    public function show($groups, Student $student)
     {
-        return view('students.show', ['student' => Student::find($id)]);
+        return view('students.show', ['group' => $student->group, 'student' => $student]);
     }
 
     /**

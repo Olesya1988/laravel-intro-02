@@ -7,10 +7,10 @@
     </head>
     <body>
         <div class="container">
-            <h1>Создание нового студента</h1>        
+            <h1>Создание нового студента группы {{$group}}</h1>        
             <form method="post" action="/groups/{{$group}}/students">
             @csrf
-                <input type="text" name="id" id="id" placeholder="Введите id группы">
+                <input type="text" name="group_id" id="id" value="{{$group}}">
                 <input type="text" name="name" id="name" placeholder="Введите имя">
                 <input type="text" name="surname" id="surname" placeholder="Введите фамилию"></input>
                 <button type="submit">Добавить</button>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Group;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class GroupController extends Controller
@@ -37,15 +38,17 @@ class GroupController extends Controller
 
         Group::create($request->all());
 
-        return redirect()->route('groups.index')->with('success','Group created successfully.');
+        return redirect()->action([GroupController::class, 'index']);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show($id = null)
+    public function show(Group $group)
     {
-        return view('groups.show', ['group' => Group::find($id)]);
+        $students = $group->students;
+
+        return view('groups.show', ['group' => $group, 'students' => $students]);
     }
 
     /**
